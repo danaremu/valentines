@@ -1,0 +1,156 @@
+:root {
+  --light-color: #f5f5f5;
+  --dark-color: #222;
+  --accent-color: #bdb5a8;
+  --accent-color-strong: #ec8144;
+  --accent-color-strong: brown;
+}
+
+.App {
+  position: relative;
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-container {
+  position: relative;
+  width: min(100%, 323px);
+  height: min(100%, 575px);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--accent-color);
+  box-shadow: 0.3rem 0.3rem 1rem var(--dark-color);
+
+  background: #3a6186;
+  background: -webkit-linear-gradient(to right, #89253e, #3a6186);
+  background: linear-gradient(to right, #89253e, #3a6186);
+
+  background: linear-gradient(180deg, rgb(53, 53, 175), white 15%);
+
+  & .writeup {
+    position: absolute;
+    width: 70%;
+    height: auto;
+    min-height: 10px;
+    background-color: transparent;
+    color: var(--dark-color);
+    /* transform: rotate(-17deg); */
+    bottom: 3%;
+    right: 0px;
+    text-shadow: 0 0 1px var(--accent-color-strong);
+    text-shadow: 0 0 2px var(--light-color);
+    font-family: 'Corinthia', serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.9rem;
+    color: purple;
+
+    &::before {
+      position: absolute;
+      background-color: var(--light-color);
+      inset: 0;
+      content: '';
+      opacity: 0.5;
+    }
+
+    & span {
+      position: relative;
+      display: block;
+      z-index: 2;
+    }
+
+    & span:last-child {
+      color: red;
+    }
+  }
+
+  & .pix-card {
+    position: absolute;
+    /* width: 209px;
+    height: 268px; */
+    width: 55dvw;
+    height: 40dvh;
+    padding: 10px 7px;
+    background-color: var(--light-color);
+    transform: rotate(-10deg);
+    top: 10%;
+    left: 0%;
+    box-shadow: 0 0 1px 0 var(--dark-color);
+
+    & .img-card {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1;
+      background-color: var(--dark-color);
+      background-image: url('./img1.jpg');
+      background-position: center;
+      background-size: cover;
+      background-clip: border-box;
+      box-shadow: 0 0 2px 0 var(--accent-color);
+      filter: grayscale(0.6);
+    }
+
+    & .img-text {
+      position: relative;
+      padding: 15px 10px;
+      height: auto;
+      width: 100%;
+
+      font-weight: 500;
+      font-style: normal;
+      font-size: 1.3rem;
+    }
+
+    &:nth-child(2) {
+      transform: rotate(9deg);
+      top: 35%;
+      left: 40%;
+
+      & .img-card {
+        background-image: url('./img2.jpg');
+      }
+    }
+
+    &:nth-child(3) {
+      zoom: 0.6;
+      transform: rotate(8deg);
+      top: 60%;
+      left: 10%;
+      z-index: 0;
+
+      & .img-card {
+        background-image: url('./img3.jpg');
+      }
+    }
+
+    &:nth-child(4) {
+      zoom: 0.5;
+      transform: rotate(20deg);
+      top: 0%;
+      left: 40%;
+      z-index: 0;
+
+      & .img-card {
+        background-image: url('./img4.jpg');
+      }
+    }
+
+    &:nth-child(5) {
+      zoom: 0.7;
+      transform: rotate(-15deg);
+      top: 10%;
+      left: 65%;
+      z-index: 0;
+
+      & .img-card {
+        background-image: url('./img5.jpg');
+      }
+    }
+  }
+}
+
+/* https://377wbll6-3000.uks1.devtunnels.ms/ */
